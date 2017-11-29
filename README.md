@@ -7,13 +7,16 @@ Develop the client and server components of a text chat application, consisting 
 2. Implementation
 
 2.1 Sockets
+
 Used TCP Sockets.
 Used the select() system call only for handling multiple socket connections.
 
 2.2 Running my program
+
 This program will take 2 command line parameters:
 The first parameter (s/c) indicates whether your program instance should run as a server or a client.
 The second parameter (number) is the port number on which your process will listen for incoming connections. In the rest of the document, this port is referred to as the listening port.
+
 E.g., if your executable is named chat_app:
 To run as a server listening on port 4322
 ./chat_app s 4322
