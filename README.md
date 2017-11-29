@@ -159,9 +159,7 @@ Exceptions to be handled : Invalid IP address/port number (e.g., 127.abc is an i
 
 Get an updated list of currently logged-in clients from the server.
 
-**SEND** 
-
-SEND <client-ip> <msg>
+**SEND** [client-ip] [msg]
 
 Send message: <msg> to client with ip address: <client-ip>. <msg> can have a maximum length of 256 bytes and will consist of valid ASCII characters.
 
@@ -169,10 +167,8 @@ Exceptions to be handled
 Invalid IP address.
 Valid IP address which does not exist in the local copy of the list of logged-in clients (This list may be outdated. Do not update it as a result of this check).
 
-**BROADCAST** 
+**BROADCAST** [msg]
   
- BROADCAST <msg>
-
 Send message: <msg> to all logged-in clients. <msg> can have a maximum length of 256 bytes and will consist of valid ASCII characters.
 
 This should be a server-assisted broadcast. The sending client should send only one message to the server, indicating it is a broadcast. The server then forwards/relays this message to all the currently logged-in clients and stores/buffers the message for the others.
